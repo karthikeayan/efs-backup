@@ -259,6 +259,7 @@ Resources:
   BackupInstanceLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
+      AssociatePublicIpAddress: true
       ImageId: !GetAtt AMIInfo.Id
       SecurityGroups:
         - !Sub ${EFSSecurityGroup}
